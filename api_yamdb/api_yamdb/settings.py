@@ -68,14 +68,15 @@ WSGI_APPLICATION = 'api_yamdb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': os.getenv('DB_ENGINE',
-            default='django.db.backends.postgresql'),
+                            default='django.db.backends.postgresql'
+                            ),
         'NAME': os.getenv('DB_NAME', default='postgres'),
         'USER': os.getenv('POSTGRES_USER', default=None),
         'PASSWORD': os.getenv('POSTGRES_PASSWORD', default=None),
         'HOST': os.getenv('DB_HOST', default=None),
         'PORT': os.getenv('DB_PORT', default=None)
     }
-} 
+}
 
 
 # Password validation
@@ -115,7 +116,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
